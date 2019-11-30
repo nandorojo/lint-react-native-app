@@ -1,16 +1,8 @@
 import React from "react";
-import PropTypes, { InferProps } from "prop-types";
 import { Text } from "ink";
+import ESLint from "../components/eslint";
 
 /// Hello world command
-const Hello = ({ name }: Props) => <Text>Hello, {name}</Text>;
-
-const propTypes = {
-	/// Name of the person to greet
-	name: PropTypes.string.isRequired
-};
-Hello.propTypes = propTypes;
-
-type Props = InferProps<typeof propTypes>;
+const Hello = () => <ESLint />;
 
 export default Hello;

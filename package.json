@@ -11,14 +11,18 @@
 		"build": "pastel build",
 		"prepare": "pastel build",
 		"create": "tsc && npm run copy-commands",
-		"copy-commands": "node lib/node/index.js"
+		"gen": "node lib/node/index.js",
+		"watch:gen": "nodemon lib/node/index.js"
 	},
 	"files": [
-		"build"
+		"build",
+		"files"
 	],
 	"dependencies": {
 		"child_process": "^1.0.2",
+		"fs": "0.0.1-security",
 		"ink": "^2.6.0",
+		"ink-spinner": "^3.0.1",
 		"ncp": "^2.0.0",
 		"pastel": "^1.0.3",
 		"prop-types": "^15.7.2",
@@ -27,6 +31,12 @@
 	"devDependencies": {
 		"@types/ncp": "^2.0.3",
 		"@types/prop-types": "^15.7.3",
+		"@types/react": "^16.9.13",
+		"@typescript-eslint/eslint-plugin": "^2.9.0",
+		"@typescript-eslint/parser": "^2.9.0",
+		"eslint": "^6.7.2",
+		"eslint-plugin-react-hooks": "^2.3.0",
+		"nodemon": "^2.0.1",
 		"tslib": "^1.1.0",
 		"typescript": "^3.7.2"
 	},

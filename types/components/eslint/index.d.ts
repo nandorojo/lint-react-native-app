@@ -1,1 +1,2 @@
-export default function ESLint(): any;
+/// <reference types="react" />
+export default function ESLint(): JSX.Element;
