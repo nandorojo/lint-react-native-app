@@ -5,9 +5,9 @@ export function test() {
 export const commands = {
 	types: "npm i --save-dev @types/react @types/react-native",
 	lint:
-		"npm i --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks",
-	prettier: "npm install prettier eslint-config-prettier --save-dev",
-	react: "npm install eslint-plugin-react --save-dev",
+		"npm i --save-dev eslint-plugin-react eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks",
+	prettier:
+		"npm install prettier eslint-plugin-prettier eslint-config-prettier --save-dev",
 	vscode: "",
 	generateTypes: "",
 	generateLint: "",

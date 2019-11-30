@@ -1,2 +1,6 @@
 /// <reference types="react" />
-export default function ESLint(): JSX.Element;
+declare type Props = {
+    onFinish: () => void;
+};
+export default function ESLint(props: Props): JSX.Element;
+export {};

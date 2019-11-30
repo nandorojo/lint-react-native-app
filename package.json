@@ -1,5 +1,5 @@
 {
-	"name": "lint-react-app",
+	"name": "lint-react-native-app",
 	"version": "0.0.0",
 	"license": "MIT",
 	"bin": "./build/cli.js",

@@ -3,7 +3,6 @@ export declare const commands: {
     types: string;
     lint: string;
     prettier: string;
-    react: string;
     vscode: string;
     generateTypes: string;
     generateLint: string;
