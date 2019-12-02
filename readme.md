@@ -9,7 +9,7 @@ Originally inspired by [this article](https://medium.com/@oliver.grack/using-esl
 Run this after running `expo init` (or from `react-native` cli):
 
 ```bash
-$ npx lint-expo-app
+$ npx lint-react-native-app
 ```
 
 This will create a `.prettierrc.json` and `.eslintrc.json` file for you.
