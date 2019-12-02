@@ -2,6 +2,8 @@
 
 A command-line interface that adds linting and prettier to a `react` / `react-native` project. It primarily targets `expo`.
 
+Originally inspired by [this article](https://medium.com/@oliver.grack/using-eslint-with-typescript-and-react-hooks-and-vscode-c583a18f0c75) with additions to cover pieces it misses.
+
 ## Install
 
 Run this after running `expo init` (or from `react-native` cli):

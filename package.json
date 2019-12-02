@@ -1,6 +1,6 @@
 {
 	"name": "lint-react-native-app",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"license": "MIT",
 	"bin": "./build/cli.js",
 	"engines": {
