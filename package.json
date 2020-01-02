@@ -1,6 +1,6 @@
 {
 	"name": "lint-react-native-app",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"license": "MIT",
 	"bin": "./build/cli.js",
 	"engines": {
@@ -9,10 +9,7 @@
 	"scripts": {
 		"dev": "pastel dev",
 		"build": "pastel build",
-		"prepare": "pastel build",
-		"create": "tsc && npm run copy-commands",
-		"gen": "node lib/node/index.js",
-		"watch:gen": "nodemon lib/node/index.js"
+		"prepare": "tsc && pastel build"
 	},
 	"files": [
 		"build",
@@ -35,6 +32,7 @@
 		"@typescript-eslint/eslint-plugin": "^2.9.0",
 		"@typescript-eslint/parser": "^2.9.0",
 		"eslint": "^6.7.2",
+		"eslint-plugin-react": "^7.17.0",
 		"eslint-plugin-react-hooks": "^2.3.0",
 		"nodemon": "^2.0.1",
 		"tslib": "^1.1.0",
