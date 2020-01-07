@@ -1,8 +1,44 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Box, Color } from "ink";
 import { exec, execSync } from "child_process";
-import { commands, eslintrc } from "../../constants";
+import { commands } from "../../constants";
 import fs from "fs";
+
+const eslintrc = {
+	parser: "@typescript-eslint/parser",
+	parserOptions: {
+		jsx: true,
+		useJSXTextNode: true
+	},
+	extends: [
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"prettier",
+		"prettier/@typescript-eslint"
+	],
+	plugins: ["@typescript-eslint", "react-hooks"],
+	rules: {
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"no-unused-vars": [
+			"error",
+			{ vars: "all", args: "after-used", ignoreRestSiblings: false }
+		],
+		"@typescript-eslint/no-use-before-define": [
+			"error",
+			{ functions: true, classes: true, variables: false }
+		] // disable the rule for variables, but enable it for functions and classes
+	},
+	overrides: [
+		{
+			files: ["**/*.tsx"],
+			rules: {
+				"react/prop-types": "off"
+			}
+		}
+	]
+};
 
 const steps = [
 	{

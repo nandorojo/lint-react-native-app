@@ -20,5 +20,21 @@ export declare const eslintrc: {
         "@typescript-eslint/explicit-function-return-type": string;
         "react-hooks/rules-of-hooks": string;
         "react-hooks/exhaustive-deps": string;
+        "no-unused-vars": (string | {
+            vars: string;
+            args: string;
+            ignoreRestSiblings: boolean;
+        })[];
+        "@typescript-eslint/no-use-before-define": (string | {
+            functions: boolean;
+            classes: boolean;
+            variables: boolean;
+        })[];
     };
+    overrides: {
+        files: string[];
+        rules: {
+            "react/prop-types": string;
+        };
+    }[];
 };

@@ -3,11 +3,11 @@ export function test() {
 }
 
 export const commands = {
-	types: "npm i --save-dev @types/react @types/react-native",
+	types: "yarn add --dev @types/react @types/react-native",
 	lint:
-		"npm i --save-dev eslint-plugin-react eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks",
+		"yarn add --dev eslint-plugin-react eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks",
 	prettier:
-		"npm install prettier eslint-plugin-prettier eslint-config-prettier --save-dev",
+		"yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier",
 	vscode: "",
 	generateTypes: "",
 	generateLint: "",
@@ -22,6 +22,7 @@ export const eslintrc = {
 	},
 	extends: [
 		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
 		"prettier",
 		"prettier/@typescript-eslint"
 	],
@@ -29,6 +30,39 @@ export const eslintrc = {
 	rules: {
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn"
-	}
+		"react-hooks/exhaustive-deps": "warn",
+		"no-unused-vars": [
+			"error",
+			{ vars: "all", args: "after-used", ignoreRestSiblings: false }
+		],
+		"@typescript-eslint/no-use-before-define": [
+			"error",
+			{ functions: true, classes: true, variables: false }
+		] // disable the rule for variables, but enable it for functions and classes
+	},
+	overrides: [
+		{
+			files: ["**/*.tsx"],
+			rules: {
+				"react/prop-types": "off"
+			}
+		}
+	]
+};
+
+export const prettierrc = {
+	singleQuote: true,
+	trailingComma: "es5",
+	overrides: [
+		{
+			files: "*.ts",
+			options: {
+				parser: "typescript"
+			}
+		}
+	],
+	semi: false,
+	jsxSingleQuote: false,
+	useTabs: true,
+	tabWidth: 4
 };

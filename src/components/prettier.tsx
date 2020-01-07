@@ -27,6 +27,7 @@ export default function Prettier(props: Props) {
 
 	useEffect(() => {
 		execSync(commands.prettier);
+		execSync(commands.types);
 		setStep(1);
 		fs.appendFileSync(".prettierrc.json", JSON.stringify(prettierrc));
 		setStep(2);
