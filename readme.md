@@ -1,4 +1,4 @@
-# lint-react-native-app
+# 🤓 lint-react-native-app
 
 A command-line interface that adds linting and prettier to a `react` / `react-native` project. It primarily targets `expo`.
 
@@ -15,6 +15,8 @@ $ npx lint-react-native-app
 This will create a `.prettierrc.json` and `.eslintrc.json` file for you.
 
 It supports TypeScript, React Hooks linters, and other recommended react / react-native linter dependencies.
+
+----
 
 **ESLint file created: `.eslintrc.json`**
 
